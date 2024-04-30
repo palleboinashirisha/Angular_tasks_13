@@ -1,0 +1,177 @@
+<!-- <div class="form" [ngClass]="{fadeOut : display}"> -->
+<div class="form" [hidden]="display">
+<div>
+    <h2>Add SES Form</h2>
+</div>
+
+<div>
+    <button class="btn btn-close" (click)="onCancel()"></button>
+</div>
+
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" >
+    <label for="ses">
+        <input type="text" placeholder="SES Number" id="ses" formControlName="ses"/>
+    </label>
+   
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter SES Number</span>
+  
+
+    <label for="sr">
+        <input type="number" placeholder="Sr" id="sr" formControlName="sr"/>
+    </label>
+   
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter Sr</span>
+  
+
+    <label for="rpo">
+        <input type="text" placeholder="RPO" id="rpo" formControlName="rpo">
+    </label>
+   
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter RPO</span>
+
+
+    <label for="contract">
+        <input type="text" placeholder="Contract" id="contract" formControlName="contract">
+    </label>
+    
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter Contract</span>
+   
+
+    <label for="invoice">
+        <input type="text" placeholder="invoice" id="invoice" formControlName="invoice">
+    </label>
+    
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter invoice</span>
+    
+
+    <label for="description">
+        <input type="text" placeholder="description" id="description" formControlName="description">
+    </label>
+   
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter description</span>
+    
+
+    <label for="servicelocatioin">
+        <input type="text" placeholder="Service Location" id="servicelocatioin" formControlName="servicelocatioin">
+    </label>
+   
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter ServiceLocation</span>
+    
+
+    <label for="costcenter">
+        <input type="text" placeholder="Cost Center" id="costcenter" formControlName="costcenter">
+    </label>
+  
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter CostCenter</span>
+ 
+
+    <label for="amountExl">
+        <input type="text" placeholder="Amount Exl VAT" id="amountExl" formControlName="amountExl">
+    </label>
+   
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter AmountExlVAT</span>
+    
+
+    <label for="vat">
+        <input type="number" placeholder="VAT-15%" id="vat" formControlName="vat">
+    </label>
+    
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter VAT</span>
+   
+
+    <label for="total">
+        <input type="text" placeholder="Total" id="total" formControlName="total">
+    </label>
+    
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter Total</span>
+   
+    <label for="lessRetention">
+        <input type="text" placeholder="Less-Retention-10%" id="lessRetention" formControlName="lessRetention">
+    </label>
+   
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter LessRetention</span>
+    
+
+    <label for="netArAfterRetention">
+        <input type="text" placeholder="Net AR After Retention-USD" id="netArAfterRetention" formControlName="netArAfterRetention">
+    </label>
+  
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter NetaRAfterRetention</span>
+    
+
+    <label for="currency">
+        <input type="text" placeholder="Currency" id="currency" formControlName="currency">
+    </label>
+    
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter Currency</span>
+   
+
+    <label for="currentHolder">
+        <input type="text" placeholder="Current Hoder" id="currentHolder" formControlName="currentHolder">
+    </label>
+  
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter Current Hoder</span>
+ 
+
+    <label for="currentHolderName">
+        <input type="text" placeholder="Current Holder Name" id="currentHolderName" formControlName="currentHolderName">
+    </label>
+    
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter CurrentHolderName</span>
+    
+
+    <label for="submissiondate">
+        <input type="date" placeholder="Submission Date" id="submissiondate" formControlName="submissiondate">
+    </label>
+   
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter Submission Date</span>
+ 
+
+    <label for="commments">
+        <input type="text" placeholder="Comments" id="commments" formControlName="commments">
+    </label>
+   
+        <span style="color: red;"
+        *ngIf="!reactiveForm.get('ses').valid && reactiveForm.get('ses').touched"
+        >Please enter Comments</span>
+ 
+
+    <button class="btn btn-cancel" (click)="onCancel()">Cancel</button>
+    <button class="btn btn-save" (click)="onSaveInfo()">Save</button>
+  </form>
+
+</div>

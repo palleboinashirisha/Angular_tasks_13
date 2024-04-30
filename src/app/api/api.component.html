@@ -1,0 +1,50 @@
+<div>
+<div class="table-container">
+    <table>
+        <tr>
+            <th>Actions</th>
+            <th>Recorded Date</th>
+            <th>SES Number</th>
+            <th>Sr</th>
+            <th>RPO</th>
+            <th>Contract</th>
+            <th>Invoice</th>
+            <th>Description</th>
+            <th>Service Location</th>
+            <th>Cost Center</th>
+            <th>Amount Exl VAT</th>
+            <th>VAT-15%</th>
+            <th>Total</th>
+            <th>Less-Retention-10%</th>
+            <th>Net AR After Retention-USD</th>
+            <th>Currency</th>
+            <th>Submission Date</th>
+            <th>Current Holder Name</th>
+            <th>Current Holder</th>
+            <th>Status</th>
+        </tr>
+        <tr *ngFor="let info of data">
+            <td><button (click)="onPopUp()">...</button></td>
+            <td>{{info.recordeddate}}</td>
+            <td>{{info.sesNumber}}</td>
+            <td>{{info.sr}}</td>
+            <td>{{info.rpo}}</td>
+            <td>{{info.contract}}</td>
+            <td>{{info.invoice}}</td>
+            <td>{{info.description}}</td>
+            <td>{{info.serviceLocation}}</td>
+            <td>{{info.costcenter}}</td>
+            <td>{{info.amountexlvat}}</td>
+            <td>{{info.vat}}</td>
+            <td>{{info.total}}</td>
+            <td>{{info.lessRetention}}</td>
+            <td>{{info.arAfterRetention}}</td>
+            <td>{{info.currency}}</td>
+            <td>{{info.submissionDt}}</td>
+            <td>{{info.currentHolderName}}</td>
+            <td>{{info.currentHolder}}</td>
+            <td>{{info.status}}</td>
+        </tr>
+    </table>
+</div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PopUpService } from './pop-up.service'; 
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'task4';
+  constructor(private popservice : PopUpService){}
+
+  addSes(){
+    this.popservice.openPopUp();
+  }
 }
